@@ -7,21 +7,22 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.EventRepository;
 import com.example.demo.entities.Event;
+
 @Service
 public class EventMetierImpl implements EventMetier {
-	@Autowired
-	private EventRepository eventRepositoy;
-	
-	@Override
-	public Event saveEvent(Event E) {
-		
-		return eventRepositoy.save(E);
-	}
+    @Autowired
+    private EventRepository eventRepositoy;
 
-	@Override
-	public List<Event> listEvent() {
-		
-		return eventRepositoy.findAll();
-	}
+    @Override
+    public Event saveEvent(Event E) {
+
+        return eventRepositoy.save(E);
+    }
+
+    @Override
+    public List<Event> listEvent() {
+
+        return eventRepositoy.findAll();
+    }
 
 }

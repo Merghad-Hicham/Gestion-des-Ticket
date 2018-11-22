@@ -13,16 +13,17 @@ import com.example.demo.metier.UserMetier;
 
 @RestController
 public class UserRestService {
-	@Autowired
-	private UserMetier userMetier;
-	
-	@RequestMapping(value="/User",method=RequestMethod.POST)
-	public User saveUser(@RequestBody User A) {
-		return userMetier.saveUser(A);
-	}
-	@RequestMapping(value="/User",method=RequestMethod.GET)
-	public List<User> listUser() {
-		return userMetier.listUser();
-	}
+    @Autowired
+    private UserMetier userMetier;
+
+    @RequestMapping(value = "/User", method = RequestMethod.POST)
+    public User saveUser(@RequestBody User A) {
+        return userMetier.saveUser(A);
+    }
+
+    @RequestMapping(value = "/User", method = RequestMethod.GET)
+    public List<User> listUser() {
+        return userMetier.listUser();
+    }
 
 }

@@ -12,18 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entities.Event;
 import com.example.demo.metier.EventMetier;
+
 @RestController
 @CrossOrigin("*")
 public class EventRestService {
-	@Autowired
-	 private EventMetier eventMetier;
-	@RequestMapping(value="/event",method=RequestMethod.POST)
-	public Event saveEvent(@RequestBody Event E) {
-		return eventMetier.saveEvent(E);
-	}
-	@RequestMapping(value="/event",method=RequestMethod.GET)
-	public List<Event> listEvent() {
-		return eventMetier.listEvent();
-	}
+    @Autowired
+    private EventMetier eventMetier;
+
+    @RequestMapping(value = "/event", method = RequestMethod.POST)
+    public Event saveEvent(@RequestBody Event E) {
+        return eventMetier.saveEvent(E);
+    }
+
+    @RequestMapping(value = "/event", method = RequestMethod.GET)
+    public List<Event> listEvent() {
+        return eventMetier.listEvent();
+    }
 
 }

@@ -6,6 +6,7 @@ import com.example.demo.entities.Billet;
 
 
 public interface BilletMetier {
-	public Billet saveBillet(Billet A);
-	public List<Billet> listBillet();
+    public Billet saveBillet(Billet A);
+
+    public List<Billet> listBillet();
 }

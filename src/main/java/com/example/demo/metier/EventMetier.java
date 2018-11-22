@@ -6,6 +6,7 @@ import java.util.List;
 import com.example.demo.entities.Event;
 
 public interface EventMetier {
-	public Event saveEvent(Event E);
-	public List<Event> listEvent();
+    public Event saveEvent(Event E);
+
+    public List<Event> listEvent();
 }

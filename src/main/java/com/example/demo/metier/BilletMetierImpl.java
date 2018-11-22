@@ -9,21 +9,21 @@ import com.example.demo.dao.BilletRepository;
 import com.example.demo.entities.Billet;
 
 @Service
-public class BilletMetierImpl implements BilletMetier{
+public class BilletMetierImpl implements BilletMetier {
 
-	@Autowired
-	private BilletRepository billetRepositoy;
-	
-	@Override
-	public Billet saveBillet(Billet A) {
-		
-		return billetRepositoy.save(A);
-	}
+    @Autowired
+    private BilletRepository billetRepositoy;
 
-	@Override
-	public List<Billet> listBillet() {
-		// TODO Auto-generated method stub
-		return billetRepositoy.findAll();
-	}
+    @Override
+    public Billet saveBillet(Billet A) {
+
+        return billetRepositoy.save(A);
+    }
+
+    @Override
+    public List<Billet> listBillet() {
+        // TODO Auto-generated method stub
+        return billetRepositoy.findAll();
+    }
 
 }

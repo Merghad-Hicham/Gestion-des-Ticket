@@ -9,19 +9,20 @@ import com.example.demo.dao.UserRepository;
 import com.example.demo.entities.User;
 
 @Service
-public class UserMetierImpl implements UserMetier{
-	@Autowired
-	private UserRepository userRepositoy;
-	@Override
-	public User saveUser(User A) {
-		
-		return userRepositoy.save(A);
-	}
+public class UserMetierImpl implements UserMetier {
+    @Autowired
+    private UserRepository userRepositoy;
 
-	@Override
-	public List<User> listUser() {
-		return userRepositoy.findAll();
-	}
+    @Override
+    public User saveUser(User A) {
 
-	
+        return userRepositoy.save(A);
+    }
+
+    @Override
+    public List<User> listUser() {
+        return userRepositoy.findAll();
+    }
+
+
 }
